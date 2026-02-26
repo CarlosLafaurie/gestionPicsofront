@@ -1,61 +1,104 @@
-# Picso
+# Enterprise CRM System – Frontend (Angular)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.8.
+Frontend application developed with Angular for an enterprise CRM system focused on inventory management, movement tracking, schedule control, and operational performance metrics.
 
-## Development server
+This application consumes a secure REST API deployed in Azure and implements authentication using JWT with role-based access control (RBAC).
 
-To start a local development server, run:
+---
+
+## 🚀 Features
+
+- User authentication (JWT-based)
+- Role-based access control (Admin / User)
+- Inventory management (CRUD)
+- Inventory movement tracking (inbound / outbound)
+- Schedule management
+- Dashboard with operational metrics (KPIs)
+- Protected routes using Angular Guards
+- HTTP Interceptors for token handling
+- Responsive design for desktop environments
+
+---
+
+## 🏗 Architecture
+
+The project follows a modular feature-based architecture:
+
+- Separation of concerns (components, services, models)
+- Lazy-loaded modules
+- Centralized API service layer
+- Route protection via Guards
+- HTTP Interceptor for JWT token injection
+- Environment-based configuration
+
+The application is structured to ensure scalability and maintainability in enterprise environments.
+
+---
+
+## 🛠 Tech Stack
+
+- Angular 19
+- TypeScript
+- RxJS
+- Bootstrap / CSS
+- REST API integration
+- JWT Authentication
+- Azure-hosted backend
+
+---
+
+## 🔐 Authentication & Security
+
+- Login system using JWT
+- Token storage and automatic injection via HTTP Interceptor
+- Route protection based on user roles
+- Secure communication with Azure-hosted backend API
+
+---
+
+## 🌐 Backend Integration
+
+This frontend consumes a REST API developed in ASP.NET Core and deployed in Azure.
+
+API Base URL is configured in:
+
+src/environments/environment.ts
+
+
+---
+
+## ⚙ Development Setup
+
+Install dependencies:
 
 ```bash
+npm install
+
+Run development server:
+
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Navigate to:
 
-## Code scaffolding
+http://localhost:4200/
+📦 Production Build
+ng build --configuration=production
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Build artifacts are stored in the dist/ directory.
 
-```bash
-ng generate component component-name
-```
+☁ Deployment
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The backend API is deployed in Microsoft Azure.
 
-```bash
-ng generate --help
-```
+Frontend can be deployed using:
 
-## Building
+Azure Static Web Apps
 
-To build the project run:
+Azure App Service
 
-```bash
-ng build
-```
+Any static hosting provider
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+📌 Author
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-
-- web service corriendo en azure
+Carlos Lafaurie
+Full Stack Developer – Angular & .NET
